@@ -42,7 +42,7 @@ pre[class*='language-'] code {
 
 /* Links color */
 a {
-  color: #b294bb; /* Purple link color */
+  color: #007acc; /* Blue link color */
 }
 
 /* Hover effect for links */
@@ -62,7 +62,7 @@ h6 {
 
 /* Blockquote style */
 blockquote {
-  border-left: 2px solid #cc6666; /* Red border on left */
+  border-left: 2px solid #cc6666; /* Red border on the left */
   background-color: #2e2e2e; /* Dark gray background */
   padding: 0.5em 1em;
   margin: 1em 0;
@@ -73,7 +73,7 @@ blockquote {
 /* List item style */
 ul li,
 ol li {
-  color: #b5bd68; /* Greenish list items */
+  color: #66c2cd; /* Light blue list items */
 }
 
 /* Table style */
@@ -96,7 +96,7 @@ table th {
 
 /* Table header text color */
 table th {
-  color: #b294bb; /* Purple table header text */
+  color: #007acc; /* Blue table header text */
 }
 
 /* Horizontal rule style */
