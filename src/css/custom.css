@@ -1,12 +1,8 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+/* Custom CSS for Linux-inspired Blog Website */
 
-/* You can override the default Infima variables here. */
+/* Override Infima variables */
 :root {
-  --ifm-color-primary: #2e8555;
+  --ifm-color-primary: #2e8555; /* Green */
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
   --ifm-color-primary-darkest: #205d3b;
@@ -17,9 +13,9 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Dark mode changes */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary: #25c2a0; /* Teal for dark mode */
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
   --ifm-color-primary-darkest: #1a8870;
@@ -27,4 +23,83 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Linux terminal-style code blocks */
+pre[class*='language-'] {
+  background-color: #2e2e2e; /* Dark gray background */
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 1em;
+  overflow: auto;
+  font-family: 'Courier New', monospace;
+}
+
+/* Linux terminal-style code block text color */
+pre[class*='language-'] code {
+  color: #c5c8c6; /* Light gray text */
+}
+
+/* Links color */
+a {
+  color: #b294bb; /* Purple link color */
+}
+
+/* Hover effect for links */
+a:hover {
+  text-decoration: underline;
+}
+
+/* Headings style */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #cc6666; /* Red headings */
+}
+
+/* Blockquote style */
+blockquote {
+  border-left: 2px solid #cc6666; /* Red border on left */
+  background-color: #2e2e2e; /* Dark gray background */
+  padding: 0.5em 1em;
+  margin: 1em 0;
+  font-style: italic;
+  color: #c5c8c6; /* Light gray text */
+}
+
+/* List item style */
+ul li,
+ol li {
+  color: #b5bd68; /* Greenish list items */
+}
+
+/* Table style */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  color: #c5c8c6; /* Light gray text */
+}
+
+table th,
+table td {
+  border: 1px solid #333;
+  padding: 0.5em 1em;
+}
+
+/* Table header style */
+table th {
+  background-color: #444;
+}
+
+/* Table header text color */
+table th {
+  color: #b294bb; /* Purple table header text */
+}
+
+/* Horizontal rule style */
+hr {
+  border: 1px solid #444; /* Dark gray horizontal rule */
 }
