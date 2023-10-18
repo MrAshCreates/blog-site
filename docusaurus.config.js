@@ -127,10 +127,4 @@ const config = {
   },
 };
 
-module.exports = {
-  config,
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'fr'],
-  },
-};
+module.exports = config;
