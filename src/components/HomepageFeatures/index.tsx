@@ -63,8 +63,10 @@ export default function HomepageFeatures(): JSX.Element {
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
+          
         </div>
       </div>
+      <div className="giscus" /> {/* Giscus comments will be placed here */}
     </section>
   );
 }
