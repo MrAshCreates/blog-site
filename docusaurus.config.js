@@ -21,7 +21,7 @@ const config = {
   organizationName: 'MrAshCreates', // Usually your GitHub org/user name.
   projectName: 'blog-site', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -37,19 +37,22 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/MrAshCreates/blog-site/tree/main/',
-        },
+        docs: false,
         blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/MrAshCreates/blog-site/tree/main/',
+          blogTitle: 'MrAshCreates Blog',
+						blogDescription: 'macOS translation layer for Linux',
+						routeBasePath: '/',
+						showReadingTime: true,
+						editUrl: 'https://github.com/MrAshCreates/blog-site/tree/main/',
+						postsPerPage: 'ALL',
+						blogSidebarTitle: 'All posts',
+						blogSidebarCount: 'ALL',
+				
+						feedOptions: {
+							type: 'all',
+							copyright: `Copyright © ${new Date().getFullYear()} MrAshCreates`,
+						},
+
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -69,12 +72,6 @@ const config = {
         src: 'img/logo.svg',
       },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
-        },
         { to: '/blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/MrAshCreates/blog-site',
@@ -87,16 +84,7 @@ const config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'Community',
+          title: 'Social',
           items: [
             {
               label: 'Linkedin',
@@ -116,8 +104,8 @@ const config = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'Main Site',
+              href: 'https://mrashcreates.xyz',
             },
             {
               label: 'GitHub',
@@ -131,6 +119,9 @@ const config = {
     prism: {
       theme: lightCodeTheme,
       darkTheme: darkCodeTheme,
+    },
+    colorMode: {
+      respectPrefersColorScheme: true,
     },
   },
 };
