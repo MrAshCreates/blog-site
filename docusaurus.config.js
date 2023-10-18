@@ -40,8 +40,8 @@ const config = {
         docs: false,
         blog: {
           blogTitle: 'MrAshCreates Blog',
-						blogDescription: 'macOS translation layer for Linux',
-						routeBasePath: '/',
+						blogDescription: 'The best place to read blogs from Asher',
+						routeBasePath: '/blog',
 						showReadingTime: true,
 						editUrl: 'https://github.com/MrAshCreates/blog-site/tree/main/',
 						postsPerPage: 'ALL',
@@ -54,6 +54,7 @@ const config = {
 						},
 
         },
+        
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -126,4 +127,10 @@ const config = {
   },
 };
 
-module.exports = config;
+module.exports = {
+  config,
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'fr'],
+  },
+};
