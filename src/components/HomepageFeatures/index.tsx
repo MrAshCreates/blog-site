@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
-
+import Giscus from '@giscus/react'
 type FeatureItem = {
   title: string;
   Svg: React.ComponentType<React.ComponentProps<'svg'>>;
@@ -57,16 +57,31 @@ function Feature({title, Svg, description}: FeatureItem) {
 
 export default function HomepageFeatures(): JSX.Element {
   return (
-    <section className={styles.features}>
+    <><section className={styles.features}>
       <div className="container">
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
-          
+
         </div>
       </div>
       <div className="giscus" /> {/* Giscus comments will be placed here */}
-    </section>
+    </section><Giscus
+      id=" comments"
+      repo="MrAshCreates/blog-site"
+      repoId="R_kgDOKiCvtg"
+      category="General"
+      categoryId="DIC_kwDOKiCvts4CaPxU"
+      mapping="pathname"
+      term="Welcome to @giscus/react component!"
+      reactionsEnabled="1"
+      emitMetadata="1"
+      inputPosition="top"
+      theme="preferred_color_scheme"
+      lang="en"
+      loading="lazy"
+      ></Giscus></>
+
   );
 }
