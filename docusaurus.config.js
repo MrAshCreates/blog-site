@@ -6,15 +6,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'MrAshCreates',
+  tagline: 'Your favorite site to get the latest from Asher',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://blog.mrashcreates.xyz',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/Blog-Site',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
