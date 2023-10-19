@@ -7,16 +7,17 @@ export default function Giscus() {
 
 	return (
 		<GiscusReact
-			repo="darlinghq/darling"
-			repoId="MDEwOlJlcG9zaXRvcnk3MDc3Njkw"
-			category="Blog comments"
-			categoryId="DIC_kwDOAGv_Os4CWo3g"
-			mapping="title"
-			strict="1"
+			id=" comments"
+			repo="MrAshCreates/blog-site"
+			repoId="R_kgDOKiCvtg"
+			category="General"
+			categoryId="DIC_kwDOKiCvts4CaPxU"
+			mapping="pathname"
+			term="Welcome!"
 			reactionsEnabled="1"
-			emitMetadata="0"
-			inputPosition="bottom"
-			theme={colorMode}
+			emitMetadata="1"
+			inputPosition="top"
+			theme="preferred_color_scheme"
 			lang="en"
 			loading="lazy"
 		/>
