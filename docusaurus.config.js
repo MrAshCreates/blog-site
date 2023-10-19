@@ -73,7 +73,6 @@ const config = {
         src: 'img/logo.svg',
       },
       items: [
-        { to: '/blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/MrAshCreates/blog-site',
           label: 'GitHub',
