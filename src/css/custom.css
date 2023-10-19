@@ -1,14 +1,14 @@
-/* Custom CSS for Linux-inspired Blog Website */
+/* Custom CSS for Modern and Arch Linux-inspired Blog Website */
 
 /* Override Infima variables */
 :root {
-  --ifm-color-primary: #2e8555; /* Green */
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #1793d0; /* Arch Linux Blue */
+  --ifm-color-primary-dark: #0f6ab7;
+  --ifm-color-primary-darker: #0d5eaa;
+  --ifm-color-primary-darkest: #0a508c;
+  --ifm-color-primary-light: #1ea5e0;
+  --ifm-color-primary-lighter: #28b7e4;
+  --ifm-color-primary-lightest: #38c5f1;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
@@ -42,7 +42,7 @@ pre[class*='language-'] code {
 
 /* Links color */
 a {
-  color: #007acc; /* Blue link color */
+  color: #1793d0; /* Arch Linux Blue link color */
 }
 
 /* Hover effect for links */
@@ -96,7 +96,7 @@ table th {
 
 /* Table header text color */
 table th {
-  color: #007acc; /* Blue table header text */
+  color: #1793d0; /* Arch Linux Blue table header text */
 }
 
 /* Horizontal rule style */
