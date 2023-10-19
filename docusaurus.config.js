@@ -70,7 +70,7 @@ const config = {
             title: 'MrAshCreates',
             logo: {
                 alt: 'My Site Logo',
-                src: 'img/logo.svg',
+                src: 'img/logo.ico',
             },
             items: [
                 { to: '/tags', label: 'Sort by Tags', position: 'left' },
