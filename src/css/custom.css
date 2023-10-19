@@ -22,14 +22,14 @@
 /* Dark Mode */
 
 [data-theme='dark'] {
-    --primary-color: #51a1f1;
-    /* Light blue primary color in dark mode */
-    --primary-color-dark: #3391ef;
-    --primary-color-darker: #2489ed;
-    --primary-color-darkest: #1171d1;
-    --primary-color-light: #6fb1f3;
-    --primary-color-lighter: #7eb9f5;
-    --primary-color-lightest: #aad1f8;
+    --primary-color: #25c2a0;
+    /* Teal primary color in dark mode */
+    --primary-color-dark: #21af90;
+    --primary-color-darker: #1fa588;
+    --primary-color-darkest: #1a8870;
+    --primary-color-light: #29d5b0;
+    --primary-color-lighter: #32d8b4;
+    --primary-color-lightest: #4fddbf;
     --highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
@@ -37,9 +37,9 @@
 /* Code Blocks */
 
 pre[class*='language-'] {
-    background-color: #f7f7f7;
+    background-color: #f5f5f5;
     /* Light gray background for code blocks */
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     border-radius: 4px;
     padding: 1em;
     overflow: auto;
@@ -87,12 +87,12 @@ h6 {
 blockquote {
     border-left: 4px solid var(--primary-color);
     /* Left border color for blockquote */
-    background-color: #f2f2f2;
+    background-color: #f5f5f5;
     /* Light gray background for blockquote */
     padding: 0.5em 1em;
     margin: 1em 0;
     font-style: italic;
-    color: #555;
+    color: #333;
     /* Dark text color for blockquote */
 }
 
@@ -115,13 +115,16 @@ table {
 
 table th,
 table td {
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     padding: 0.5em 1em;
     text-align: left;
 }
 
+
+/* Table Header */
+
 table th {
-    background-color: #f2f2f2;
+    background-color: #f5f5f5;
     /* Light gray background for table headers */
     color: #333;
     /* Dark text color for table headers */
@@ -131,7 +134,7 @@ table th {
 /* Horizontal Rule */
 
 hr {
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     /* Light gray horizontal rule */
 }
 
