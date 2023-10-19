@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
-import GiscusReact from '@giscus/react'
+import Giscus from '@giscus/react'
 import { useColorMode } from '@docusaurus/theme-common';
 type FeatureItem = {
   title: string;
@@ -35,7 +35,7 @@ export default function HomepageFeatures(): JSX.Element {
         </div>
       </div>
       <div className="giscus" /> {/* Giscus comments will be placed here */}
-    </section><GiscusReact
+    </section><Giscus
       id=" comments"
       repo="MrAshCreates/blog-site"
       repoId="R_kgDOKiCvtg"
@@ -49,7 +49,7 @@ export default function HomepageFeatures(): JSX.Element {
       theme="preferred_color_scheme"
       lang="en"
       loading="lazy"
-      ></GiscusReact></>
+      ></Giscus></>
 
   );
 }
