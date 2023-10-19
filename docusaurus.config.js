@@ -11,7 +11,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production URL of your site here
-  url: 'https://blog.mrashcreates.xyz',
+  url: 'https://blog.mrashcreates.xyz/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/blog',
@@ -41,7 +41,7 @@ const config = {
         blog: {
           blogTitle: 'MrAshCreates Blog',
 						blogDescription: 'The best place to read blogs from Asher',
-						routeBasePath: '/blog',
+						routeBasePath: '/',
 						showReadingTime: true,
 						editUrl: 'https://github.com/MrAshCreates/blog-site/tree/main/',
 						postsPerPage: 'ALL',
