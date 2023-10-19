@@ -1,76 +1,75 @@
 /**
- * Custom CSS for a Modern and Code-Readable Blog
+ * Custom CSS for Code Presentation
  */
 
 
-/* Infima Overrides for Code Readability */
+/* Default Color Palette */
 
 :root {
-    --ifm-color-primary: #007acc;
-    /* Blue */
-    --ifm-color-primary-dark: #005a9e;
-    --ifm-color-primary-darker: #004c84;
-    --ifm-color-primary-darkest: #003e6a;
-    --ifm-color-primary-light: #0097e2;
-    --ifm-color-primary-lighter: #00a7ff;
-    --ifm-color-primary-lightest: #00b9ff;
-    --ifm-code-font-size: 100%;
-    /* Slightly larger for better readability */
-    --docusaurus-highlighted-code-line-bg: rgba(0, 122, 204, 0.1);
-    /* Light blue highlight */
+    --primary-color: #0a437b;
+    /* Dark blue primary color */
+    --primary-color-dark: #093c6f;
+    --primary-color-darker: #093969;
+    --primary-color-darkest: #072f56;
+    --primary-color-light: #0b4a87;
+    --primary-color-lighter: #0c4d8d;
+    --primary-color-lightest: #0d57a0;
+    --code-font-size: 95%;
+    --highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 
-/* Dark Mode Optimizations */
+/* Dark Mode */
 
 [data-theme='dark'] {
-    --ifm-color-primary: #00b7e2;
-    /* Dark Blue for dark mode */
-    --ifm-color-primary-dark: #0093b7;
-    --ifm-color-primary-darker: #007fa0;
-    --ifm-color-primary-darkest: #005b74;
-    --ifm-color-primary-light: #00c6ff;
-    --ifm-color-primary-lighter: #00d5ff;
-    --ifm-color-primary-lightest: #00e8ff;
-    --docusaurus-highlighted-code-line-bg: rgba(0, 183, 226, 0.3);
-    /* Dark blue highlight in dark mode */
+    --primary-color: #51a1f1;
+    /* Light blue primary color in dark mode */
+    --primary-color-dark: #3391ef;
+    --primary-color-darker: #2489ed;
+    --primary-color-darkest: #1171d1;
+    --primary-color-light: #6fb1f3;
+    --primary-color-lighter: #7eb9f5;
+    --primary-color-lightest: #aad1f8;
+    --highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
 
-/* Improved Code Block Styling */
+/* Code Blocks */
 
 pre[class*='language-'] {
     background-color: #f7f7f7;
-    /* Light gray background */
-    border: 1px solid #e0e0e0;
+    /* Light gray background for code blocks */
+    border: 1px solid #ddd;
     border-radius: 4px;
     padding: 1em;
     overflow: auto;
     font-family: 'Courier New', monospace;
 }
 
+
+/* Code Text */
+
 pre[class*='language-'] code {
     color: #333;
-    /* Dark gray text */
+    /* Dark text color for code */
 }
 
 
-/* Links Color and Hover Effect */
+/* Links */
 
 a {
-    color: #007acc;
-    /* Blue link color */
-    transition: color 0.3s;
+    color: var(--primary-color);
+    /* Link color */
+    text-decoration: underline;
 }
 
 a:hover {
-    text-decoration: underline;
-    color: #005a9e;
-    /* Slightly darker blue on hover */
+    text-decoration: none;
+    /* Remove underline on hover */
 }
 
 
-/* Headings Styling */
+/* Headings */
 
 h1,
 h2,
@@ -78,61 +77,68 @@ h3,
 h4,
 h5,
 h6 {
-    color: #333;
-    /* Dark gray headings */
+    color: var(--primary-color);
+    /* Primary color for headings */
 }
 
 
-/* Blockquote Style for Code Guides */
+/* Blockquote */
 
 blockquote {
-    border-left: 2px solid #007acc;
-    /* Blue border on the left */
-    background-color: #f7f7f7;
-    /* Light gray background */
-    padding: 1em;
+    border-left: 4px solid var(--primary-color);
+    /* Left border color for blockquote */
+    background-color: #f2f2f2;
+    /* Light gray background for blockquote */
+    padding: 0.5em 1em;
     margin: 1em 0;
     font-style: italic;
-    color: #666;
-    /* Slightly darker gray text */
+    color: #555;
+    /* Dark text color for blockquote */
 }
 
 
-/* List Items Style */
+/* Lists */
 
 ul li,
 ol li {
-    color: #333;
-    /* Dark gray list items */
+    color: #555;
+    /* Dark text color for list items */
 }
 
 
-/* Table Styling */
+/* Tables */
 
 table {
     border-collapse: collapse;
     width: 100%;
-    color: #333;
-    /* Dark gray text */
 }
 
 table th,
 table td {
-    border: 1px solid #e0e0e0;
+    border: 1px solid #ddd;
     padding: 0.5em 1em;
+    text-align: left;
 }
 
 table th {
-    background-color: #f0f0f0;
-    /* Slightly lighter gray for table headers */
-    color: #007acc;
-    /* Blue table header text */
+    background-color: #f2f2f2;
+    /* Light gray background for table headers */
+    color: #333;
+    /* Dark text color for table headers */
 }
 
 
-/* Horizontal Rule Style */
+/* Horizontal Rule */
 
 hr {
-    border: 1px solid #e0e0e0;
+    border: 1px solid #ddd;
     /* Light gray horizontal rule */
+}
+
+
+/* Code Line Highlighting */
+
+.line-highlight {
+    background-color: var(--highlighted-code-line-bg);
+    /* Background color for highlighted code lines */
 }
