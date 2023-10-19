@@ -116,7 +116,7 @@ const config = {
               label: 'GitHub',
               href: 'https://github.com/MrAshCreates/blog-site',
             },
-          ],
+          ], position: 'left' 
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} MrAshCreates`,

@@ -1,105 +1,138 @@
-/* Custom CSS for Modern and Arch Linux-inspired Blog Website */
+/**
+ * Custom CSS for a Modern and Code-Readable Blog
+ */
 
-/* Override Infima variables */
+
+/* Infima Overrides for Code Readability */
+
 :root {
-  --ifm-color-primary: #1793d0; /* Arch Linux Blue */
-  --ifm-color-primary-dark: #0f6ab7;
-  --ifm-color-primary-darker: #0d5eaa;
-  --ifm-color-primary-darkest: #0a508c;
-  --ifm-color-primary-light: #1ea5e0;
-  --ifm-color-primary-lighter: #28b7e4;
-  --ifm-color-primary-lightest: #38c5f1;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+    --ifm-color-primary: #007acc;
+    /* Blue */
+    --ifm-color-primary-dark: #005a9e;
+    --ifm-color-primary-darker: #004c84;
+    --ifm-color-primary-darkest: #003e6a;
+    --ifm-color-primary-light: #0097e2;
+    --ifm-color-primary-lighter: #00a7ff;
+    --ifm-color-primary-lightest: #00b9ff;
+    --ifm-code-font-size: 100%;
+    /* Slightly larger for better readability */
+    --docusaurus-highlighted-code-line-bg: rgba(0, 122, 204, 0.1);
+    /* Light blue highlight */
 }
 
-/* Dark mode changes */
+
+/* Dark Mode Optimizations */
+
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0; /* Teal for dark mode */
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+    --ifm-color-primary: #00b7e2;
+    /* Dark Blue for dark mode */
+    --ifm-color-primary-dark: #0093b7;
+    --ifm-color-primary-darker: #007fa0;
+    --ifm-color-primary-darkest: #005b74;
+    --ifm-color-primary-light: #00c6ff;
+    --ifm-color-primary-lighter: #00d5ff;
+    --ifm-color-primary-lightest: #00e8ff;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 183, 226, 0.3);
+    /* Dark blue highlight in dark mode */
 }
 
-/* Linux terminal-style code blocks */
+
+/* Improved Code Block Styling */
+
 pre[class*='language-'] {
-  background-color: #2e2e2e; /* Dark gray background */
-  border: 1px solid #333;
-  border-radius: 4px;
-  padding: 1em;
-  overflow: auto;
-  font-family: 'Courier New', monospace;
+    background-color: #f7f7f7;
+    /* Light gray background */
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 1em;
+    overflow: auto;
+    font-family: 'Courier New', monospace;
 }
 
-/* Linux terminal-style code block text color */
 pre[class*='language-'] code {
-  color: #c5c8c6; /* Light gray text */
+    color: #333;
+    /* Dark gray text */
 }
 
-/* Links color */
+
+/* Links Color and Hover Effect */
+
 a {
-  color: #1793d0; /* Arch Linux Blue link color */
+    color: #007acc;
+    /* Blue link color */
+    transition: color 0.3s;
 }
 
-/* Hover effect for links */
 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
+    color: #005a9e;
+    /* Slightly darker blue on hover */
 }
 
-/* Headings style */
+
+/* Headings Styling */
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: #cc6666; /* Red headings */
+    color: #333;
+    /* Dark gray headings */
 }
 
-/* Blockquote style */
+
+/* Blockquote Style for Code Guides */
+
 blockquote {
-  border-left: 2px solid #cc6666; /* Red border on the left */
-  background-color: #2e2e2e; /* Dark gray background */
-  padding: 0.5em 1em;
-  margin: 1em 0;
-  font-style: italic;
-  color: #c5c8c6; /* Light gray text */
+    border-left: 2px solid #007acc;
+    /* Blue border on the left */
+    background-color: #f7f7f7;
+    /* Light gray background */
+    padding: 1em;
+    margin: 1em 0;
+    font-style: italic;
+    color: #666;
+    /* Slightly darker gray text */
 }
 
-/* List item style */
+
+/* List Items Style */
+
 ul li,
 ol li {
-  color: #66c2cd; /* Light blue list items */
+    color: #333;
+    /* Dark gray list items */
 }
 
-/* Table style */
+
+/* Table Styling */
+
 table {
-  border-collapse: collapse;
-  width: 100%;
-  color: #c5c8c6; /* Light gray text */
+    border-collapse: collapse;
+    width: 100%;
+    color: #333;
+    /* Dark gray text */
 }
 
 table th,
 table td {
-  border: 1px solid #333;
-  padding: 0.5em 1em;
+    border: 1px solid #e0e0e0;
+    padding: 0.5em 1em;
 }
 
-/* Table header style */
 table th {
-  background-color: #444;
+    background-color: #f0f0f0;
+    /* Slightly lighter gray for table headers */
+    color: #007acc;
+    /* Blue table header text */
 }
 
-/* Table header text color */
-table th {
-  color: #1793d0; /* Arch Linux Blue table header text */
-}
 
-/* Horizontal rule style */
+/* Horizontal Rule Style */
+
 hr {
-  border: 1px solid #444; /* Dark gray horizontal rule */
+    border: 1px solid #e0e0e0;
+    /* Light gray horizontal rule */
 }
