@@ -73,6 +73,7 @@ const config = {
         src: 'img/logo.svg',
       },
       items: [
+        { to: '/tags', label: 'Sort by Tags', position: 'left' },
         {
           href: 'https://github.com/MrAshCreates/blog-site',
           label: 'GitHub',
@@ -103,6 +104,10 @@ const config = {
         {
           title: 'More',
           items: [
+            { 
+              label: 'Sort Blogs by their tags',
+              to: 'tags/',
+            },
             {
               label: 'Main Site',
               href: 'https://mrashcreates.xyz',
