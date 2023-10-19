@@ -13,7 +13,7 @@ export default function Giscus() {
 			category="General"
 			categoryId="DIC_kwDOKiCvts4CaPxU"
 			mapping="pathname"
-			term="Welcome!"
+			term="Welcome to @giscus/react component!"
 			reactionsEnabled="1"
 			emitMetadata="1"
 			inputPosition="top"
