@@ -1,6 +1,6 @@
 ---
 slug: update:1-0-1
-title: 'Blog Update: More Content and Features and Regular Updates'
+title: 'Blog Update: 1.0.1'
 authors: [asher]
 tags: [blog-updates]
 ---
