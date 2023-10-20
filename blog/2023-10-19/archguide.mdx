@@ -9,7 +9,6 @@ tags: [Linux, ArchLinux, KDE, Guide, Tutorial]
 
 In this guide, I'll take you through the installation process of Arch Linux using the `archinstall` command.
 We'll also cover some essential tasks like updating your system and installing applications.
-
 ## Installing Arch Linux with archinstall
 
 Now I am going to assume anyone following this installation has either never touched anything other than windows or hasn't messed with arch.
@@ -23,6 +22,8 @@ For this tutorial you will need:
 - [BalenaEtcher](https://etcher.balena.io/#download-etcher) installed on computer (/downloads)
 - the [ArchLinux](https://archlinux.org/download/) iso installed on computer (/downloads)
 - Knowledge of you computers bios and how to open it. (if you don't know I have information below)
+
+If you already know how to do the setup process for the tools we need you can skip the three Setup sections and go straight to [Step 1](/archguide#step-1-boot-into-the-arch-linux-live-environment)
 
 ## Setup 1: In case you need help with the downloads
 lets's go over to the arch linux website highlighted above and we will first download the archlinux iso.
@@ -47,9 +48,9 @@ Proceed with caution.
 
 :::
 
-For `File` you will select the Arch ISO usually located at `/downloads/archlinux-x86_64.iso`
-For `Device` Select the USB device that matches the correct name and/or storage.
-Now click `Flash` Approve the usable of balena with admin permissions when you see the prompt and then just wait.
+For `Flash from file` you will select the Arch ISO usually located at `/downloads/archlinux-x86_64.iso`
+For `Select Target` Select the USB device that matches the correct name and/or storage.
+Now click `Flash!` Approve the usable of balena with admin permissions when you see the prompt and then just wait.
 It will now Flash the iso to the usb device and then verify integrity.
 You can skip this but it is recommended not to.
 
@@ -106,9 +107,9 @@ The second should be your laptop manufacturer and model or computer motherboard 
 
 **Examples:**
 
-How to `Enter Bios` on an `Lenovo Thinkpad L14`
+How to `Enter Bios` on a `Lenovo Thinkpad L14`
 
-How to `Disable Secure Boot` on an `VivoBook ASUS Laptop X512JA`
+How to `Disable Secure Boot` on a `VivoBook ASUS Laptop X512JA`
 
 This can go for the rest of the guide for anything I don't cover.
 But you can also post a comment with a question and I can update this to include your questions.

@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    title: 'MrAshCreates',
+    title: 'Asher\'s Blog',
     tagline: 'Your favorite site to get the latest from Asher',
     favicon: 'img/favicon.ico',
 
@@ -39,7 +39,7 @@ const config = {
             ({
                 docs: false,
                 blog: {
-                    blogTitle: 'MrAshCreates Blog',
+                    blogTitle: 'Asher\'s Blog',
                     blogDescription: 'The best place to read blogs from Asher',
                     routeBasePath: '/',
                     showReadingTime: true,
@@ -66,9 +66,9 @@ const config = {
         // Replace with your project's social card
         image: 'img/banner-2560x1440.jpg',
         navbar: {
-            title: 'MrAshCreates',
+            title: 'Asher\'s Blog',
             logo: {
-                alt: 'My Site Logo',
+                alt: 'Asher\'s Logo',
                 src: 'https://github.com/mrashcreates.png',
             },
             items: [
@@ -105,7 +105,7 @@ const config = {
                             to: 'tags/',
                         },
                         {
-                            label: 'Main Site',
+                            label: 'Asher\'s Main Site',
                             href: 'https://mrashcreates.xyz',
                         },
                         {
