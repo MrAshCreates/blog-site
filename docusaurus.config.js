@@ -21,8 +21,8 @@ const config = {
     organizationName: 'MrAshCreates', // Usually your GitHub org/user name.
     projectName: 'blog-site', // Usually your repo name.
 
-    onBrokenLinks: 'ignore',
-    onBrokenMarkdownLinks: 'warn',
+    onBrokenLinks: 'throw',
+    onBrokenMarkdownLinks: 'throw',
 
     // Even if you don't use internalization, you can use this field to set useful
     // metadata like HTML lang. For example, if your site is Chinese, you may want
@@ -43,7 +43,6 @@ const config = {
                     blogDescription: 'The best place to read blogs from Asher',
                     routeBasePath: '/',
                     showReadingTime: true,
-                    editUrl: 'https://github.com/MrAshCreates/blog-site/tree/main/',
                     postsPerPage: 'ALL',
                     blogSidebarTitle: 'All posts',
                     blogSidebarCount: 'ALL',
@@ -70,7 +69,7 @@ const config = {
             title: 'MrAshCreates',
             logo: {
                 alt: 'My Site Logo',
-                src: 'img/logo.ico',
+                src: 'https://github.com/mrashcreates.png',
             },
             items: [
                 { to: '/tags', label: 'Sort by Tags', position: 'left' },

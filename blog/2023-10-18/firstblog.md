@@ -1,9 +1,9 @@
 ---
 slug: firstblog
 title: My First Blog
-description: Everything I have beem up too summed up into a nice blog
+description: Everything I have been up too summed up into a nice blog
 authors: [asher]
-tags: [blog-updates, gettingreal, website-update, life-update]
+tags: [blog-updates, getting-real, website-update, life-update]
 ---
 
 ## From High School to Neumont University
@@ -14,12 +14,6 @@ As I prepare to graduate high school in May 2024, I find myself on the cusp of a
 
 One significant aspect of my tech journey has been my love for Arch Linux with a KDE desktop environment. The level of customization, speed, and stability it offers is truly unparalleled. I have honed my development skills and gained a deeper understanding of the Linux ecosystem through this journey. It's been an amazing experience configuring and tweaking my Linux system to perfection.
 
-## Embracing the Nothing Phone 2
-
-The tech enthusiast in me couldn't resist getting my hands on the Nothing Phone 2 when it was released. Its unique design and innovative features immediately caught my attention. I was pleasantly surprised by its clean Android OS and how smoothly it ran. But what excited me the most was the ability to root the device.
-
-Rooting the Nothing Phone 2 provided me with unlimited possibilities to customize the phone's software. It's been an incredible learning experience as I dived into the world of custom ROMs, unlocking the full potential of the device.
-
 ## Sharing My Journey with the World
 
 As part of my journey, I decided to document my experiences and thoughts through my personal blog. The idea was to create a platform where I could share my tech adventures, Linux tips, and insights into the Nothing Phone 2.
@@ -29,3 +23,7 @@ The response has been overwhelming. It's heartening to see that people are enjoy
 I'm excited about the path ahead. Graduating high school, embarking on my college journey, and continuing to explore the ever-evolving tech world, I look forward to what the future holds. Stay tuned for more adventures, tips, and reviews on my blog. Thanks for joining me on this exciting journey!
 
 Have any questions or topics you'd like me to explore? Feel free to leave a comment and let me know. Together, we'll make this journey even more incredible!
+
+### Last Updated: Oct 20th, 2023
+
+update 1.0.3 : this will be remade to fit what I wanted to say verses what I needed to get out.
