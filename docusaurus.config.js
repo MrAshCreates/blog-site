@@ -43,12 +43,7 @@ const config = {
                     blogDescription: 'The best place to read blogs from Asher',
                     routeBasePath: '/',
                     showReadingTime: true,
-                    postsPerPage: 'ALL',
-                    blogSidebarTitle: 'All posts',
-                    blogSidebarCount: 'ALL',
-
                     feedOptions: {
-                        type: 'all',
                         copyright: `Copyright © ${new Date().getFullYear()} MrAshCreates`,
                     },
 

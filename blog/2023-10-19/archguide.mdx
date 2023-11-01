@@ -9,11 +9,13 @@ tags: [Linux, ArchLinux, KDE, Guide, Tutorial]
 
 In this guide, I'll take you through the installation process of Arch Linux using the `archinstall` command.
 We'll also cover some essential tasks like updating your system and installing applications.
+<!--truncate-->
+
 ## Installing Arch Linux with archinstall
 
 Now I am going to assume anyone following this installation has either never touched anything other than windows or hasn't messed with arch.
 This tutorial will take you out of your comfort zone but it should give you a fun experience and hopefully a working system.
-<!--truncate-->
+
 For this tutorial you will need:
 
 - a functional computer or laptop with Windows or Linux that does not have an ARM chip. ( The better the computer the better the experience you will get)
@@ -91,6 +93,8 @@ Zotac: DEL
 ```
 **Credits to:** [tomshardware](https://www.tomshardware.com/reviews/bios-keys-to-access-your-firmware,5732.html) for the text I have provided
 
+Proceed by holding one of those keys and then clicking the power button. You should see the device boot screen and then be dropped into a bios. 
+You might also be thrown into a Boot Menu which you can use later in this tutorial.
 Once you enter bios you will most likely need to modify some settings to ensure that the installation will be successful.
 The bios settings tend to be moved around depending on Manufacturers.
 So don't be afraid of checking all the tabs and getting comfortable with the Bios of your computer.
@@ -159,14 +163,14 @@ We will be using the Station commands found in IWD to complete this step. here a
 ```
 
 Station:
-  station list                                        List devices in Station mode
-  station <wlan> connect <"network name"> [security]  Connect to network
-  station <wlan> connect-hidden <"network name">      Connect to hidden network
-  station <wlan> disconnect                           Disconnect
-  station <wlan> get-networks [rssi-dbms/rssi-bars]   Get networks
-  station <wlan> get-hidden-access-points [rssi-dbms] Get hidden APs
-  station <wlan> scan                                 Scan for networks
-  station <wlan> show                                 Show station info
+station list                                        List devices
+station <wlan> connect <"network name"> [security]  Connect to network
+station <wlan> connect-hidden <"network name">      Connect to hidden network
+station <wlan> disconnect                           Disconnect
+station <wlan> get-networks [rssi-dbms/rssi-bars]   Get networks
+station <wlan> get-hidden-access-points [rssi-dbms] Get hidden APs
+station <wlan> scan                                 Scan for networks
+station <wlan> show                                 Show station info
 
 ```
 
@@ -176,10 +180,10 @@ after we run the command we should see the following
 
 ```
 [iwd]# station list
-                            Devices in Station Mode                           *
---------------------------------------------------------------------------------
+                            Devices in Station Mode                        *
+----------------------------------------------------------------------------
   Name                  State            Scanning
---------------------------------------------------------------------------------
+----------------------------------------------------------------------------
   wlan0                 disconnected     false
 
 ```
@@ -199,15 +203,287 @@ If it says connected and the ip addresses are filled in go ahead and run the com
 
 If you have any issues repeat this step or check the arch wiki for more information.
 
+### Edit pacman.conf(optional)
+:::tip Note
+If you have slower internet I recommend editing the pacman.conf to support ParallelDownloads
+
+This can help increase downloads by downloading more packages at once.
+
+First run `nano /etc/pacman.conf` and click the down arrow until you reach `# Misc options`
+
+You should see something like this
+```
+# Misc options
+
+#UseSyslog
+#Color
+#NoProgressBar
+CheckSpace
+#VerbosePkgLists
+#ParallelDownloads = 5
+```
+we will edit pacman.conf to look like this
+
+```
+# Misc options
+
+#UseSyslog
+#Color
+#NoProgressBar
+CheckSpace
+#VerbosePkgLists
+
+#you can change this to any number that will help increase the speed of downloads. Remember to high will make it worse. I recommend anything from 3-15
+ParallelDownloads = 15
+
+```
+After you do this click `ctrl + x` then `y` then `enter`
+
+You should see it save these edits to the file and now you can continue to the next step
+:::
+
+
+
 ## Step 3: Arch Install!
 
 Now anything after this command is mostly subjective to my prefrences but it will help you follow the rest of this guide when it comes to customizations and troubleshooting..
 
 Okay run `archinstall` this can take a minute to load on bad internet so don't freak out.
 
+You should see it load a few options we can edit to change how our system will act.
+First we will edit all the options that are blank.
+After you can go on your own and edit the rest and I will show my personal config at the bottom.
+
+### Mirrors
+First we will edit our mirror region. This is the region you are located at currently.
+It should be the second option, so click the down arrow so that you see this `>` in front of the `Mirrors` option like this `>  Mirrors` and hit enter.
+
+Now you should see `> Mirror region` already selected so hit enter.
+
+Now use the up/down arrows to locate your region or the closest to you.
+Since I am in the United States I clicked the up arrow which will bring you to the bottom of the list if at the top.
+Now I kept clicking it till it covered the `>  [ ] United States` Option then hit the tab button to select it. Now I see `> [*] United States` but depending on your location this will look differently.
+Once you find your region and select it you can go ahead and hit enter. Then go ahead and click the down arrow till you reach `>  Back` and then hit enter once more.
+
+### Disk configuration
+Now we will edit our Disk config. This is where arch will  be installed.
+It should be the forth option, so click the down arrow so that you see this `>` in front of the `Disk configuration` option like this `>  Disk configuration` and hit enter.
+
+You should see `> Use a best-effort default partition layout` already selected so hit enter.
+
+Now use the arrows to locate the Disk you are intending arch on.
+This shouldn't be too difficult but if you don't know the storage plus the model on your disk and you have multiple disk for some reason then you will need to do some educated guessing.
+
+For me I have two disk currently plugged in. My Hard drive and the USB stick, I know that the brand of my USB is SanDisk.
+So out of the two options I already know which is the hard drive. But In case I didn't I can check storage. My USB has an Insane 256GBs while the Hard Drive has only 
+
+
+
+
+
+
+
+
+
+
+
+
+- ~~update 1.0.2~~ : finish the installation guide. **Delayed Till Update 1.0.4**
+
+
+
+
+## What is pacman
+
+Pacman is the **pac**kage **man**ager of Arch Linux. just like how ubuntu has `apt` we have `pacman`
+It has many purposes with the main one being downloading new software and updating old ones.
+Below I have listen the most useful commands and how to upgrade pacman's capabilities.
+
+## Unlocking pacman's capabilities
+first we will open the terminal on your computer. I recommend looking for the search bar on the desktop and typing `terminal`. This will show the apps that are listed as terminals.
+However If you followed the installation guide you should have `Konsole` which is the default terminal for KDE Plasma.
+But you could also have `Black box` which is the default for Gnome.
+
+once in the terminal we will run a few commands to edit the `pacman.conf` file
+:::danger Caution
+
+You will need Superuser permissions to complete this process as messing with this file could lead to you not being able to upgrade or use your system.
+I recommend only changing what I change as that is all you will really need.
+:::
+
+First run `sudo nano /etc/pacman.conf` you should be prompted for the super user password to continue.
+
+You should see a file open within the terminal. Your mouse will not be very helpful in this part so use the keyboard arrows to navigate.
+
+Click the down arrow until you see `#IgnorePkg =` the best I can simplify it is if you download a package/app from the internet and installed it you will write the name of it here.
+This basically just prevents pacman from searching for a package that doesn't exist in the AUR. for instance I have `#IgnorePkg = Codux cider windscribe` which is all software I searched up and downloaded.
+But also In my case I use a alpha version of cider. So although cider exist in the aur it isn't cider2.
+
+I could have also put cider in the `#NoUpgrade`
+
+Now go down til you see `# Misc options` you should see something similar to this below
+
+```
+# Misc options
+
+#UseSyslog
+#Color
+#NoProgressBar
+CheckSpace
+#VerbosePkgLists
+#ParallelDownloads = 5
+```
+
+we will edit pacman.conf to look like this
+
+```
+# Misc options
+
+UseSyslog
+Color
+#NoProgressBar
+CheckSpace
+VerbosePkgLists
+ParallelDownloads = 15
+ILoveCandy
+```
+ILoveCandy is a secret that kinda turns the progress bar into PacMan.
+
+
+
+
+
+
+
+##What you should see
+
+Once you finish You should have something similar too this but not exactly this.
+```
+GNU nano 7.2             /etc/pacman.conf              Modified
+
+#
+# /etc/pacman.conf
+#
+# See the pacman.conf(5) manpage for option and repository directives
+
+#
+# GENERAL OPTIONS
+#
+[options]
+# The following paths are commented out with their default values listed.
+# If you wish to use different paths, uncomment and update the paths.
+#RootDir     = /
+#DBPath      = /var/lib/pacman/
+#CacheDir    = /var/cache/pacman/pkg/
+#LogFile     = /var/log/pacman.log
+#GPGDir      = /etc/pacman.d/gnupg/
+#HookDir     = /etc/pacman.d/hooks/
+HoldPkg     = pacman glibc
+#XferCommand = /usr/bin/curl -L -C - -f -o %o %u
+#XferCommand = /usr/bin/wget --passive-ftp -c -O %o %u
+#CleanMethod = KeepInstalled
+Architecture = auto
+
+#IgnorePkg   = Codux cider windscribe
+#IgnorePkg   =
+#IgnoreGroup =
+
+#NoUpgrade   =
+#NoExtract   =
+
+# Misc options
+UseSyslog
+Color
+#NoProgressBar
+CheckSpace
+VerbosePkgLists
+ParallelDownloads = 15
+ILoveCandy
+
+# By default, pacman accepts packages signed by keys that its local keyring
+# trusts (see pacman-key and its man page), as well as unsigned packages.
+SigLevel    = Required DatabaseOptional
+LocalFileSigLevel = Optional
+#RemoteFileSigLevel = Required
+
+# NOTE: You must run `pacman-key --init` before first using pacman; the local
+# keyring can then be populated with the keys of all official Arch Linux
+# packagers with `pacman-key --populate archlinux`.
+
+#
+# REPOSITORIES
+#   - can be defined here or included from another file
+#   - pacman will search repositories in the order defined here
+#   - local/custom mirrors can be added here or in separate files
+#   - repositories listed first will take precedence when packages
+#     have identical names, regardless of version number
+#   - URLs will have $repo replaced by the name of the current repo
+#   - URLs will have $arch replaced by the name of the architecture
+#
+# Repository entries are of the format:
+#       [repo-name]
+#       Server = ServerName
+#       Include = IncludePath
+#
+# The header [repo-name] is crucial - it must be present and
+# uncommented to enable the repo.
+#
+
+# The testing repositories are disabled by default. To enable, uncomment the
+# repo name header and Include lines. You can add preferred servers immediately
+# after the header, and they will be used before the default mirrors.
+
+#[core-testing]
+#Include = /etc/pacman.d/mirrorlist
+
+[core]
+Include = /etc/pacman.d/mirrorlist
+
+#[extra-testing]
+#Include = /etc/pacman.d/mirrorlist
+
+[extra]
+Include = /etc/pacman.d/mirrorlist
+
+# If you want to run 32 bit applications on your x86_64 system,
+# enable the multilib repositories as required here.
+
+#[multilib-testing]
+#Include = /etc/pacman.d/mirrorlist
+
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+
+[kde-unstable]
+Include = /etc/pacman.d/mirrorlist
+
+
+# An example of a custom package repository.  See the pacman manpage for
+# tips on creating your own repositories.
+
+#[custom]
+#SigLevel = Optional TrustAll
+#Server = file:///home/custompkgs
+
+```
+
+
+
+
+
+## Using pacman 
+Syu & Syyu: these commands will the the most important as they update all packages on the system except those on the `ignorepkg` line of the pacman.conf
+
+
+
+
+
+
+
+
 ### Last Updated: Oct 20th, 2023
 
-- update 1.0.2 : finish the installation guide
+- update 1.0.4 : finish the installation guide
 - update 1.0.4 : tips on how to use pacman and installing the recommend packages/apps that I use
 - update 1.0.6 : how to customize KDE plasma 5 to your style
 - update 1.0.7 : gaming on arch
